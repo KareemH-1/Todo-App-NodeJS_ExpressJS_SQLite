@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App | NodeJS ExpressJS SQLite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-mode">
+    <section id="auth">
+        <div>
+            <h2 class="sign-up">Login</h2>
+            <p>Create an account</p>
+        </div>
+        <div class="form"></div>
+            <p class="error" style="display: none;"></p>
+            <input id="email-input" type="email" placeholder="Email">
+            <input id="password-input" type="password" placeholder="********">
+            <button id="auth-btn" onclick="authenticate()">Login</button>
+            <hr/>
+            <div class="register-content">
+                <p>Don't have an account?</p>
+                <button id="register-btn" onclick="changeForm()">Register</button> 
+            </div>
+        </div>
+    </section>
+    
+    <header style="display: none;">
+        <h1 class="text-gradient">You have 0 open tasks.</h1>
+    </header>
+    <nav style="display: none;" class="tab-container">
+        <button onclick="changeTab('All')" class="tab-button  selected-tab">
+            <h4>All <span>(0)</span></h4>
+        </button>
+        <button onclick="changeTab('Open')" class="tab-button  ">
+            <h4>Open <span>(0)</span></h4>
+        </button>
+        <button onclick="changeTab('Complete')" class="tab-button  ">
+            <h4>Complete <span>(0)</span></h4>
+        </button>
+        <hr />
+    </nav>
+    <main style="display: none;">
+
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

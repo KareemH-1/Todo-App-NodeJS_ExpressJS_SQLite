@@ -1,0 +1,51 @@
+### Get /
+Get http://localhost:3000
+
+### Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin@gmail.com",
+    "password": "admin123"
+}
+
+### Register
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username": "admin@gmail.com",
+    "password": "admin123"
+}
+
+### Get todos
+GET http://localhost:3000/todos
+//the jwt
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU4MzgwODY1LCJleHAiOjE3NTg0NjcyNjV9.2B9EPhwBO-IV9EbsNos5NPwvxVHYMLkZsu7kVv5lOd0
+
+### Create todo
+
+POST http://localhost:3000/todos
+//the jwt
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU4MzgwODY1LCJleHAiOjE3NTg0NjcyNjV9.2B9EPhwBO-IV9EbsNos5NPwvxVHYMLkZsu7kVv5lOd0
+Content-Type: application/json
+
+{
+    "task" : "test"
+}
+
+### Delete todo
+
+DELETE http://localhost:3000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU4MzgwODY1LCJleHAiOjE3NTg0NjcyNjV9.2B9EPhwBO-IV9EbsNos5NPwvxVHYMLkZsu7kVv5lOd0
+
+### Update todo (complete it)
+PUT http://localhost:3000/todos/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU4MzgwODY1LCJleHAiOjE3NTg0NjcyNjV9.2B9EPhwBO-IV9EbsNos5NPwvxVHYMLkZsu7kVv5lOd0
+Content-Type: application/json
+
+{
+    "task": "test",
+    "completed": 1
+}
